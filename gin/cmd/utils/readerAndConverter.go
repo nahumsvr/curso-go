@@ -2,7 +2,7 @@ package utils
 
 import (
 	"encoding/json"
-	"gin_http/cmd/interfaces"
+	"gin_http/cmd/services"
 	"io"
 	"net/http"
 
@@ -18,7 +18,7 @@ func ReadBody(c *gin.Context) []byte {
 	return body
 }
 
-func ConvertToJson(c *gin.Context, body []byte, user *interfaces.User) {
+func ConvertToJson(c *gin.Context, body []byte, user *services.User) {
 	err := json.Unmarshal(body, &user)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Error parseando el JSON"})
