@@ -1,8 +1,10 @@
 # Curso GO
 
-## Práctica 6
-Migrar la funcionalidad de la practica 5 a GIN, utilizar los URL params para los métodos de borrado y actualización de usuario.
-
+## Práctica 7
+Implementar controladores y servicios en el proyecto de users de Gin:
+- Controlador de usuarios
+- Servicio de usuarios
+- Middleware de autenticación por API KEY
 #### Para correr el servidor usar el comando
 ```
 go run cmd/main.go
